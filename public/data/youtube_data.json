@@ -1,0 +1,182 @@
+{
+  "kind": "youtube#searchListResponse",
+  "etag": "8DK-6EVcZrgGJRPI1NtAMchlabw",
+  "nextPageToken": "CAoQAA",
+  "regionCode": "JP",
+  "pageInfo": {
+      "totalResults": 20,
+      "resultsPerPage": 10
+  },
+  "items": [
+      {
+          "kind": "youtube#searchResult",
+          "etag": "bRhIEh-W1JgY-Rc6V7LCvLdlCKw",
+          "id": {
+              "kind": "youtube#video",
+              "videoId": "ABN5IFW7PJg"
+          },
+          "snippet": {
+              "publishedAt": "2021-08-15T11:00:07Z",
+              "channelId": "UCER-2DF4WSpGaK02GkvOzdg",
+              "title": "ヴァンパイア  踊ってみた",
+              "description": "本家様： https://youtu.be/e1xCOsgWG0M 振付本家様：https://youtu.be/vMDun_T06NE 使用音源様：月乃様 (いつもご快諾ありがとうござい ...",
+              "thumbnails": {
+                  "default": {
+                      "url": "https://i.ytimg.com/vi/ABN5IFW7PJg/default.jpg",
+                      "width": 120,
+                      "height": 90
+                  },
+                  "medium": {
+                      "url": "https://i.ytimg.com/vi/ABN5IFW7PJg/mqdefault.jpg",
+                      "width": 320,
+                      "height": 180
+                  },
+                  "high": {
+                      "url": "https://i.ytimg.com/vi/ABN5IFW7PJg/hqdefault.jpg",
+                      "width": 480,
+                      "height": 360
+                  }
+              },
+              "channelTitle": "!ぷ",
+              "liveBroadcastContent": "none",
+              "publishTime": "2021-08-15T11:00:07Z"
+          }
+      },
+      {
+          "kind": "youtube#searchResult",
+          "etag": "qxx_iJYc1-MpE8V7nCLlqIORGbs",
+          "id": {
+              "kind": "youtube#video",
+              "videoId": "FiukQbWydqk"
+          },
+          "snippet": {
+              "publishedAt": "2021-07-28T11:00:12Z",
+              "channelId": "UCER-2DF4WSpGaK02GkvOzdg",
+              "title": "晴天を穿つ  踊ってみた",
+              "description": "初めて踊ってみたを撮っていただいた、大好きな曲です。 本家様： https://youtu.be/IkByPGNDLZU 振付本家様：https://youtu.be/BsYDURJMmzM 撮影・編集：shachiさん.",
+              "thumbnails": {
+                  "default": {
+                      "url": "https://i.ytimg.com/vi/FiukQbWydqk/default.jpg",
+                      "width": 120,
+                      "height": 90
+                  },
+                  "medium": {
+                      "url": "https://i.ytimg.com/vi/FiukQbWydqk/mqdefault.jpg",
+                      "width": 320,
+                      "height": 180
+                  },
+                  "high": {
+                      "url": "https://i.ytimg.com/vi/FiukQbWydqk/hqdefault.jpg",
+                      "width": 480,
+                      "height": 360
+                  }
+              },
+              "channelTitle": "!ぷ",
+              "liveBroadcastContent": "none",
+              "publishTime": "2021-07-28T11:00:12Z"
+          }
+      },
+      {
+          "kind": "youtube#searchResult",
+          "etag": "Ti-qtiVV8liBdmjc5sXUsbDNu3Q",
+          "id": {
+              "kind": "youtube#video",
+              "videoId": "YnsmEV32vY4"
+          },
+          "snippet": {
+              "publishedAt": "2021-04-22T11:00:19Z",
+              "channelId": "UCER-2DF4WSpGaK02GkvOzdg",
+              "title": "千本桜  踊ってみた",
+              "description": "桜の下でこの曲を踊るのが夢でした   袖が重くて腕もげました   ※Cosplayあり 本家様：https://youtu.be/shs0rAiwsGQ 振付本家様：https://nico.ms/sm16379376 撮影・ ...",
+              "thumbnails": {
+                  "default": {
+                      "url": "https://i.ytimg.com/vi/YnsmEV32vY4/default.jpg",
+                      "width": 120,
+                      "height": 90
+                  },
+                  "medium": {
+                      "url": "https://i.ytimg.com/vi/YnsmEV32vY4/mqdefault.jpg",
+                      "width": 320,
+                      "height": 180
+                  },
+                  "high": {
+                      "url": "https://i.ytimg.com/vi/YnsmEV32vY4/hqdefault.jpg",
+                      "width": 480,
+                      "height": 360
+                  }
+              },
+              "channelTitle": "!ぷ",
+              "liveBroadcastContent": "none",
+              "publishTime": "2021-04-22T11:00:19Z"
+          }
+      },
+      {
+          "kind": "youtube#searchResult",
+          "etag": "tuqgmqd_MzOgpgzSRN83ACLJaT0",
+          "id": {
+              "kind": "youtube#video",
+              "videoId": "VvIU8Zg4Uug"
+          },
+          "snippet": {
+              "publishedAt": "2021-03-15T12:00:17Z",
+              "channelId": "UCER-2DF4WSpGaK02GkvOzdg",
+              "title": "ダーリンダンス  踊ってみた",
+              "description": "本家様：https://youtu.be/Rkrm5foi188 振付本家様：https://youtu.be/zoBhUonT8Ds 使用音源様：月乃 様 https://youtu.be/yytp_aDxjvI (音源使用のご快諾ありがとうご ...",
+              "thumbnails": {
+                  "default": {
+                      "url": "https://i.ytimg.com/vi/VvIU8Zg4Uug/default.jpg",
+                      "width": 120,
+                      "height": 90
+                  },
+                  "medium": {
+                      "url": "https://i.ytimg.com/vi/VvIU8Zg4Uug/mqdefault.jpg",
+                      "width": 320,
+                      "height": 180
+                  },
+                  "high": {
+                      "url": "https://i.ytimg.com/vi/VvIU8Zg4Uug/hqdefault.jpg",
+                      "width": 480,
+                      "height": 360
+                  }
+              },
+              "channelTitle": "!ぷ",
+              "liveBroadcastContent": "none",
+              "publishTime": "2021-03-15T12:00:17Z"
+          }
+      },
+      {
+          "kind": "youtube#searchResult",
+          "etag": "aFMh36MEjsco0t3-kPGh1HU8lBc",
+          "id": {
+              "kind": "youtube#video",
+              "videoId": "EoRle8OTneU"
+          },
+          "snippet": {
+              "publishedAt": "2021-03-08T11:00:17Z",
+              "channelId": "UCER-2DF4WSpGaK02GkvOzdg",
+              "title": "エンヴィーベイビー  踊ってみた",
+              "description": "本家様：https://youtu.be/dgS6HvEohsw 振付本家様：https://youtu.be/Ufj0r9fB29k 撮影・編集：shachiさん とってもかっこいい振付お借りしました！ オーバーパンツ履いて ...",
+              "thumbnails": {
+                  "default": {
+                      "url": "https://i.ytimg.com/vi/EoRle8OTneU/default.jpg",
+                      "width": 120,
+                      "height": 90
+                  },
+                  "medium": {
+                      "url": "https://i.ytimg.com/vi/EoRle8OTneU/mqdefault.jpg",
+                      "width": 320,
+                      "height": 180
+                  },
+                  "high": {
+                      "url": "https://i.ytimg.com/vi/EoRle8OTneU/hqdefault.jpg",
+                      "width": 480,
+                      "height": 360
+                  }
+              },
+              "channelTitle": "!ぷ",
+              "liveBroadcastContent": "none",
+              "publishTime": "2021-03-08T11:00:17Z"
+          }
+      }
+  ]
+}

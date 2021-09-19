@@ -1,10 +1,138 @@
-import { BASE_DIR } from '../constants.yml'
-import Sample from '@/lib/Sample';
+import {
+    BASE_DIR
+} from '../constants.yml'
+import axios from 'axios'
+import wave, {
+    init
+} from './lib/wave'
 
-const sample = new Sample({
-    name: 'world'
-});
+let youtube_data = [];
 
-document.querySelector('.wrapper').addEventListener('click', () => {
-    console.log(`hello, ${sample.name}. Base directory is ${BASE_DIR}.`);
-});
+const isPC = window.matchMedia('(min-width: 769px)').matches
+console.log(isPC)
+const kv = document.querySelector('.kv')
+const youtube_list = document.querySelector('.youtube_list')
+let kv_list
+
+// init()
+
+axios({
+    method: 'get',
+    url: 'data/youtube_data.json',
+    // url: 'https://www.googleapis.com/youtube/v3/search',
+    // params: {
+    //     key: 'AIzaSyBqZtClYLk5bIjp_D0KoCNX8TjPBXCu9ZI',
+    //     channelId: 'UCER-2DF4WSpGaK02GkvOzdg',
+    //     part: 'snippet',
+    //     maxResults: 10,
+    //     order: 'date',
+    // }
+}).then(function (res) {
+    youtube_data = res.data
+    if (!isPC) {
+        kv.insertAdjacentHTML('beforeend', [
+            `<div class="kv_swiper swiper">`,
+            `<div class="kv_list swiper-wrapper">`,
+            `</div>`,
+            `</div>`
+        ].join(''))
+        kv_list = document.querySelector('.kv_list')
+    }
+    youtube_data.items.forEach((item, i) => {
+        if (isPC) {
+            if (i == 0) {
+                kv.insertAdjacentHTML('beforeend', [
+                    `<iframe id="kv_iflame" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" src="https://www.youtube.com/embed/${item.id.videoId}?autoplay=1&mute=1&loop=1&playlist=${item.id.videoId}" frameborder="0" allowfullscreen></iframe>`,
+                ].join(''))
+                document.querySelector('#kv_iflame').addEventListener('load', function () {
+                    initPage()
+                })
+            }
+        } else {
+            kv_list.insertAdjacentHTML('beforeend', [
+                `<div class="kv_slide swiper-slide">`,
+                `<div class="kv_img">`,
+                `<img src="${item.snippet.thumbnails.high.url}">`,
+                `</div>`,
+                `</div>`,
+            ].join(''))
+
+        }
+        const youtube_slide = document.createElement('div')
+        youtube_slide.classList.add('youtube_item', 'swiper-slide');
+        youtube_slide.innerHTML = [
+            `<iframe loading="lazy" width="854" height="480" src="https://www.youtube.com/embed/${item.id.videoId}" frameborder="0" allowfullscreen></iframe>`,
+            // `<p>${item.snippet.title}</p>`,
+        ].join('')
+        youtube_list.appendChild(youtube_slide);
+    });
+    if (!isPC) {
+        initPage()
+        const kv_swiper = new Swiper('.kv_swiper', {
+            // Optional parameters
+            speed: 500,
+            loop: true,
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+            },
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            },
+        });
+        kv.style = 'padding-bottom:0;'
+    }
+
+    const youtube_swiper = new Swiper('.youtube_swiper', {
+        // Optional parameters
+        loop: true,
+        slidesPerView: 'auto',
+        centeredSlides: true,
+        spaceBetween: 16,
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+}).catch(function (error) {
+    // console.error(error.response.data.error.errors)
+    console.error(error)
+})
+
+function initPage() {
+    const loading = document.querySelector('.loading')
+    loading.addEventListener('animationend', function () {
+        this.style = 'display:none;'
+    })
+    loading.classList.add('fadeOut')
+
+    document.querySelector('body').classList.remove('fixed')
+    var ticking = false;
+    const bg2 = document.querySelector('.bg2')
+    let isInit = false
+    const profile = document.querySelector("#profile")
+
+    function animationCtrl() {
+        if (!ticking) {
+            requestAnimationFrame(function () {
+                ticking = false;
+                const y = window.pageYOffset
+                const pageH = document.body.clientHeight
+                const winH = window.innerHeight
+                bg2.style.opacity = y / (pageH - winH)
+                if (!isInit && window.pageYOffset + profile.getBoundingClientRect().top - winH * .4 < y) {
+                    init()
+                    isInit = true
+                    console.log('init')
+                }
+            });
+            ticking = true;
+        }
+    }
+
+    document.addEventListener('scroll', animationCtrl, {
+        passive: true
+    })
+}

@@ -3,10 +3,161 @@ extends /layout/_default-layout
 prepend config-block
   - page_name = ''
 
-//- append stylesheet-block
+append stylesheet-block
+  link(rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css")
 
-//- append javascript-block
+append javascript-block
+  script(src="/js/svgxuse.js")
+  script(src="https://unpkg.com/swiper@7/swiper-bundle.min.js")
 
 block content-block
-  .sample-icon
-  | hello, world!
+  .bg
+    .bg1
+    .bg2
+    span.bg_name purin
+  section.section_kv
+    .kv
+    .title_area
+      h1 
+        img.maximg(src="img/common/logo_png/purin_logo.png" alt='purin_chan unoffiial fan site')
+        //- svg.purin_logo(viewBox="0 0 512 512")
+        //-   use(xlink:href="#exclamation")
+        //-   use(xlink:href="#big_p")
+        //-   use(xlink:href="#flame")
+  aside.menu_area
+    ul.menu
+      li.to_profile
+        a(href="#profile")
+          img.maximg(src="img/top/btn_profile.png" alt="What's Purin")
+      li.to_youtube
+        a(href="#youtube")
+          img.maximg(src="img/top/btn_gallery.png" alt="Gallery")
+      li.to_review
+        a(href="#review")
+          img.maximg(src="img/top/btn_review.png" alt="お客様の声")
+  
+  section#profile.section_profile
+    h2 What's Purin
+    .profile_wrapper
+      .profile_inner.profile_inner_1
+        h3.anaglyph ぷりん
+      .profile_inner.profile_inner_2
+        ul.link_wrapper.anaglyph
+          li
+            a.link_twitter(href='https://twitter.com/cendrillon1221')
+              svg.icon.icon-twitter
+                use(xlink:href="svg/symbol-defs.svg#icon-twitter")
+              span Twitter
+          li
+            a.link_youtube(href='https://www.youtube.com/channel/UCER-2DF4WSpGaK02GkvOzdg/featured')
+              svg.icon.icon-youtube
+                use(xlink:href="svg/symbol-defs.svg#icon-youtube")
+              span Youtube
+      .profile_inner.profile_inner_3
+        .purin.purin_shadow
+          img(src="img/top/purin_shadow.png")
+        .purin.purin_black
+          img(src="img/top/purin_black.png")
+        canvas.purin#purin_wave
+        .purin.text_wrapper
+          p.percent_txt_1 充填中…
+          p.percent_txt_2 0%
+        .purin.purin_tachie
+          img(src="img/top/purin_tachie.png")
+        p.comment.comment_1.anaglyph 許しま戦地
+        p.comment.comment_2.anaglyph 許しま戦地
+      .profile_inner.profile_inner_4
+        .profile_content.anaglyph
+          p 関西を拠点に活動するフリーダンサー。
+          p ボーカロイド曲を中心にyoutubeで「踊ってみた」動画を月1本程度投稿しており、安定感がありつつもストイックでヒップホップなアクションと、笑いを抑える動き、そしてフルボディで表現する笑顔に定評がある。
+          p Twitterでは金銭感覚が良いものの曜日感覚に疎く、お上品だが買ったばかりのチャミスルを帰途に落とすなどお茶目な一面もある女の子、ゴキブリを嬉々として潰す殺戮の天使である。
+          p 代表作：「KING　踊ってみた」、「メランコリック 【C.S.Portリアレンジ 】踊ってみた」「ヴァンパイア 踊ってみた」ほか
+
+
+  section#youtube.section_youtube
+    h2 Gallery
+    .youtube_swiper.swiper
+      .youtube_list.swiper-wrapper
+      //- .swiper-pagination
+      .swiper-button-prev
+      .swiper-button-next
+    .and_more
+      a(href='https://www.youtube.com/channel/UCER-2DF4WSpGaK02GkvOzdg/featured') and more >
+  section#review.section_review
+    h2 お客様の声
+    .review_wrapper
+      .review.anaglyph
+        .icon
+          img(src='img/top/review_icons/erishia_icon.png')
+        .tweet
+          p.name 20代・おねこ様の枕
+          p.text 兄が「ぷりんちゃんの動画が凄い」「見るだけで1日最高な気持ちになれる」「1日1回見る暇がないと手が震える」「妹氏も1回！1回だけでいいから！」と煩いので見てみたら本当に最高でした！！今では私も1日1回はぷりんちゃんさんを見ずには居られません！皆さんも1回でいいんでぷりんちゃんさんの動画見てください！最高なんで！本当にすっごいキマ(ry
+      .review.anaglyph
+        .icon
+          img(src='img/top/review_icons/huari_icon.png')
+        .tweet
+          p.name 吸血鬼に飼われている人間の少女（16）
+          p.text 自撮りも踊ってみたも歌声も話し声も、ぷりんちゃんを形成する全てが私を、いえ、世界を潤し満たします。世界平和ももうすぐでしょう...。
+      .review.anaglyph
+        .icon
+          img(src='img/top/review_icons/aopan_icon.png')
+        .tweet
+          p.name ニート（41）
+          p.text ぷりんさんと遊んだら庭から石油が湧いてきたので石油王になれました。
+            br
+            |あと41年間ずっとニートしていたんですけどぷりんさんに勇気付けられて明日からニートやめようって思ってます。本当にありがとうございます
+      .review.anaglyph
+        .icon
+          img(src='img/top/review_icons/shun_icon.png')
+        .tweet
+          p.name 東京卍会壱番隊隊長（0）
+          p.text ・白猫プロジェクトで限定キャラ当てて私が回復したる！！って息巻いて即死しやがる
+            br
+            |・グル通しておやすみって言い出したくせに寝るの？って聞いてくるポンコツ
+            br
+            |・現役JKと一緒に制服コスプレでユニバに行く猛者
+            br
+            |・一緒に遊びにいって京都駅から夜景見てて綺麗だなーって思ってたら私帰れてんのにこんな残業してる人おるとかたまに優越感に浸んねん！！とかいいだすムスカ
+            br
+            |・LINEの意味がほぼない
+            br
+            |・無駄に写真が上手いポンコツ
+      .review.anaglyph
+        .icon
+          img(src='img/top/review_icons/kohran_icon.png')
+        .tweet
+          p.name オカリナ（27）
+          p.text えっちなホテルいこうね。
+      .review.anaglyph
+        .icon
+          img(src='img/top/review_icons/260_icon.png')
+        .tweet
+          p.name 配信者（260歳）
+          p.text ぷりんちゃんが夢に出てきた日の朝にひひひひ孫が産まれました。母子ともに健康です。
+      .review.anaglyph
+        .icon
+          img(src='img/top/review_icons/chana_icon.png')
+        .tweet
+          p.name 神（3）
+          p.text ぷりんちゃんのyoutubeをチャンネル登録した瞬間に全てが変わりました。庭の植物はイキイキと育ち、花は咲き空は晴れ渡り、猫は夜中に喧嘩を始めます。人々は諍いを止め、なんと滅びたといわれるドードーまでもが現れはじめたのです。ぷりんちゃんの動画を再生することでこんなにも世界が平和になったなんて誰が考えついたでしょうか。でも世界中で動画を流すにはちょっと動画のストレージ容量が不安？これからはクラウド上で好きな動画をいつまでも。もう月々の通信量で心配することはありません。そう、iPhoneならね。
+      .review.anaglyph
+        .icon
+          img(src='img/top/review_icons/aries_icon.png')
+        .tweet
+          p.name 社畜（ぷりんちゃんと同い年）
+          p.text 毎週週末をぷりんちゃんの動画で迎えています。ぷりんちゃんの動画の再生数の半分は私です。これからもずっと応援しています。でも再生数というのはYoutubeからストリーミング配信された回数をカウントしているもので、途中更新とかあったらそれぞれ２回にカウントされる可能性があるから本当に半分なのかはわからないし、もしぷりんちゃんの動画がDDos攻撃をさえてたら視聴者にかかわらず再生数は増えるしそもそもDDos攻撃とは（以下略
+      .review.anaglyph
+        .icon
+          img(src='img/top/review_icons/makoto_icon.png')
+        .tweet
+          p.name ぷりんの使い魔（43）
+          p.text ぷりんちゃん！ぷりんちゃん！ぷりんちゃん！ぷりんちゃんぅぅうううわぁああああああああああああああああああああああん！！！あぁああああ…ああ…あっあっー！あぁああああああ！！！ぷりんちゃんぷりんちゃんぷりんちゃんぅううぁわぁああああ！！！あぁクンカクンカ！クンカクンカ！スーハースーハー！スーハースーハー！いい匂いだなぁ…くんくんんはぁっ！ぷりん・オ・キョウトノオンナたんの透け感のある茶髪の髪をクンカクンカしたいお！クンカクンカ！あぁあ！！間違えた！モフモフしたいお！モフモフ！モフモフ！髪髪モフモフ！カリカリモフモフ…きゅんきゅんきゅい！！YouTubeのぷりんちゃんたんかわいかったよぅ！！あぁぁああ…あああ…あっあぁああああ！！ふぁぁあああんんっ！！映画化決まって良かったねぷりんちゃんたん！あぁあああああ！かわいい！ぷりんちゃんたん！かわいい！あっああぁああ！ぎがぷりんも発売されて嬉し…いやぁああああああ！！！にゃああああああああん！！ぎゃああああああああ！！ぐあああああああああああ！！！ぎがぷりんなんて現実じゃない！！！！あ…YouTubeも映画化もよく考えたら…ぷ り ん ち ゃ ん ち ゃ ん は 現実 じ ゃ な い？にゃあああああああああああああん！！うぁああああああああああ！！そんなぁああああああ！！いやぁぁぁあああああああああ！！はぁああああああん！！キョウトぉおおおお！！この！ちきしょー！やめてやる！！現実なんかやめ…て…え！？見…てる？表紙絵のぷりんちゃんちゃんが僕を見てる？表紙絵のぷりんちゃんちゃんが僕を見てるぞ！ぷりんちゃんちゃんが僕を見てるぞ！挿絵のぷりんちゃんちゃんが僕を見てるぞ！！映画化のぷりんちゃんちゃんが僕に話しかけてるぞ！！！よかった…世の中まだまだ捨てたモンじゃないんだねっ！いやっほぉおおおおおおお！！！僕にはぷりんちゃんちゃんがいる！！やったよチャナ！！ひとりでできるもん！！！あ、ぎがぷりんのぷりんちゃんちゃああああああああああああああん！！いやぁあああああああああああああああ！！！！あっあんああっああんあぷりんちゃんぁあ！！ぷ、ぷりんちゃん！！ぷりんちゃんぁああああああ！！！ぷりんちゃんぁあああ！！ううっうぅうう！！俺の想いよぷりんちゃんへ届け！！キョウトのぷりんちゃんへ届け！
+      .review.anaglyph
+        .icon
+          img(src='img/top/review_icons/watari_icon.png')
+        .tweet
+          p.name オレンジの球体（30）
+          p.text ぷりんちゃんの動画をみていたら目が4つになりました。
+  .loading
+    p.kaomoji ( ᐡ.  ̫ .ᐡ )
+    p now pudding ...
