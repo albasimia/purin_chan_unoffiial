@@ -104,7 +104,7 @@ body {
 
 @font-face {
   font-family: "Spartan";
-  src: url("/font/Spartan-VariableFont_wght.ttf") format("truetype"); }
+  src: url("../font/Spartan-VariableFont_wght.ttf") format("truetype"); }
 
 :root {
   --swiper-navigation-size: 60px; }
@@ -163,10 +163,10 @@ body {
   background-position: 40% 50%; }
 
 .bg .bg1 {
-  background-image: url("/img/top/bg_01.png"); }
+  background-image: url("../img/top/bg_01.png"); }
 
 .bg .bg2 {
-  background-image: url("/img/top/bg_02.png");
+  background-image: url("../img/top/bg_02.png");
   opacity: 0; }
 
 .bg .bg_name {
@@ -280,8 +280,8 @@ body {
         height: auto; }
     .section_profile .profile_wrapper .profile_inner_3 #purin_wave {
       height: auto;
-      -webkit-mask-image: url("/img/top/purin_black.png");
-              mask-image: url("/img/top/purin_black.png");
+      -webkit-mask-image: url("../img/top/purin_black.png");
+              mask-image: url("../img/top/purin_black.png");
       -webkit-mask-size: 100%;
               mask-size: 100%;
       -webkit-mask-repeat: no-repeat;
