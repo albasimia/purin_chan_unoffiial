@@ -21,7 +21,7 @@ ogp_image_url: http://example.com/ogp.jpg
 # twitter_card_owner: '@TwitterJP'
 
 # favicon
-favicon_url: /img/favicon.ico
+favicon_url: img/favicon.ico
 
 # サイトをホーム画面に追加した際のアイコン画像
 # webclipicon_url: http://example.com/webclipicon.png
