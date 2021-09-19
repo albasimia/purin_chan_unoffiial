@@ -307,10 +307,10 @@ body {
               animation: 6s ease-in 1s infinite forwards running comment;
       opacity: 0; }
     .section_profile .profile_wrapper .profile_inner_3 .comment_1 {
-      top: 10%;
+      top: 20%;
       left: 10%; }
     .section_profile .profile_wrapper .profile_inner_3 .comment_2 {
-      top: 80%;
+      bottom: 10%;
       right: 10%;
       -webkit-animation-delay: 2.5s;
               animation-delay: 2.5s; }
@@ -435,7 +435,30 @@ body {
   -webkit-animation: 1s ease-in 1s forwards fadeOut;
           animation: 1s ease-in 1s forwards fadeOut; }
 
-@media (max-width: 768px) {
+.to_top {
+  position: fixed;
+  bottom: 0;
+  right: 5%;
+  width: 50px;
+  height: 50px;
+  background-color: #000;
+  z-index: 99; }
+  .to_top a {
+    display: block;
+    height: 100%;
+    position: relative; }
+    .to_top a::after {
+      content: "";
+      width: 20%;
+      height: 20%;
+      border-top: #fff 2px solid;
+      border-left: #fff 2px solid;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -33%) rotate(45deg);
+              transform: translate(-50%, -33%) rotate(45deg); }
+    @media (max-width: 768px) {
     .main {
       padding: 32px 8px; }
         .main .menu_area .menu {
