@@ -8,13 +8,24 @@ import wave, {
 
 let youtube_data = [];
 
+const comment_data = [
+    '仕事辞めたいキャンペーン開催はや6年、、',
+    'ﾌﾟﾙ🏊🏻',
+    'ましゅまろぼでぃ…',
+    'ゆるしま㌢',
+    '戸開けたら網戸にぶつかってはじかれた',
+    'ピ',
+    'いい腕をみるとかじりたくなる本能がそういってる',
+    '無の感情で通勤するしかねえ',
+    'なお、お風呂はすけすけ',
+    'エコバッグ忘れてこうなってるなう(トマトのパックを鷲掴みにする画像)',
+]
+
 const isPC = window.matchMedia('(min-width: 769px)').matches
 console.log(isPC)
 const kv = document.querySelector('.kv')
 const youtube_list = document.querySelector('.youtube_list')
 let kv_list
-
-// init()
 
 axios({
     method: 'get',
@@ -100,6 +111,32 @@ axios({
     // console.error(error.response.data.error.errors)
     console.error(error)
 })
+
+window.addEventListener('DOMContentLoaded', () => {
+    const anchorLinks = document.querySelectorAll('a[href^="#"]');
+    const anchorLinksArr = Array.prototype.slice.call(anchorLinks);
+
+    anchorLinksArr.forEach(link => {
+        link.addEventListener('click', e => {
+            e.preventDefault();
+            const targetId = link.hash;
+            const targetElement = document.querySelector(targetId);
+            const targetOffsetTop = window.pageYOffset + targetElement.getBoundingClientRect().top;
+            window.scrollTo({
+                top: targetOffsetTop,
+                behavior: "smooth"
+            });
+        });
+    });
+});
+
+const commnets = document.querySelectorAll('.comment')
+for (const ele of commnets) {
+    ele.addEventListener('animationiteration', function () {
+        console.log(this)
+        this.textContent = comment_data[Math.floor(Math.random() * comment_data.length)];
+    })
+}
 
 function initPage() {
     const loading = document.querySelector('.loading')
