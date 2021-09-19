@@ -22,7 +22,6 @@ const comment_data = [
 ]
 
 const isPC = window.matchMedia('(min-width: 769px)').matches
-console.log(isPC)
 const kv = document.querySelector('.kv')
 const youtube_list = document.querySelector('.youtube_list')
 let kv_list
@@ -133,7 +132,6 @@ window.addEventListener('DOMContentLoaded', () => {
 const commnets = document.querySelectorAll('.comment')
 for (const ele of commnets) {
     ele.addEventListener('animationiteration', function () {
-        console.log(this)
         this.textContent = comment_data[Math.floor(Math.random() * comment_data.length)];
     })
 }
@@ -162,7 +160,6 @@ function initPage() {
                 if (!isInit && window.pageYOffset + profile.getBoundingClientRect().top - winH * .4 < y) {
                     init()
                     isInit = true
-                    console.log('init')
                 }
             });
             ticking = true;

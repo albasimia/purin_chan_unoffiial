@@ -307,13 +307,17 @@ body {
               animation: 6s ease-in 1s infinite forwards running comment;
       opacity: 0; }
     .section_profile .profile_wrapper .profile_inner_3 .comment_1 {
-      top: 20%;
-      left: 10%; }
+      top: 30%;
+      left: 10%;
+      -webkit-transform: translate(0, -50%);
+              transform: translate(0, -50%); }
     .section_profile .profile_wrapper .profile_inner_3 .comment_2 {
-      bottom: 10%;
+      bottom: 30%;
       right: 10%;
       -webkit-animation-delay: 2.5s;
-              animation-delay: 2.5s; }
+              animation-delay: 2.5s;
+      -webkit-transform: translate(0, 50%);
+              transform: translate(0, 50%); }
   .section_profile .profile_wrapper .profile_inner_4 {
     grid-row: 3 / 4;
     grid-column: 1 / 2; }
@@ -438,7 +442,7 @@ body {
 .to_top {
   position: fixed;
   bottom: 0;
-  right: 5%;
+  right: 32px;
   width: 50px;
   height: 50px;
   background-color: #000;
@@ -518,4 +522,6 @@ body {
     .loading {
       font-size: 1.5rem; }
       .loading .kaomoji {
-        font-size: 1.5rem; } }
+        font-size: 1.5rem; }
+    .to_top {
+      right: 8px; } }
