@@ -6,6 +6,10 @@ import wave, {
     init
 } from './lib/wave'
 
+import smoothscroll from 'smoothscroll-polyfill';
+
+smoothscroll.polyfill();
+
 let youtube_data = [];
 
 const comment_data = [

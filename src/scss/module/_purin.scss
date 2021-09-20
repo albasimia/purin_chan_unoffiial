@@ -81,15 +81,15 @@
         position: fixed;
         top: 0;
         left: 0;
-        width: 100%;
-        height: 100%;
+        width: 100vw;
+        height: 100vh;
         background-size: cover;
         z-index: -1;
         background-position: 40% 50%;
-        @include sp_layout {
-            width: 100vw;
-            height: 100vh;
-        }
+        // @include sp_layout {
+        //     width: 100vw;
+        //     height: 100vh;
+        // }
     }
     .bg1 {
         background-image: image-url("top/bg_01.png");
@@ -262,11 +262,12 @@
             .purin {
                 position: absolute;
                 top: 50%;
-                right: -20%;
-                width: 70%;
+                right: -38%;
+                width: 80%;
                 transform: translate(-50%, -50%);
                 transition: opacity ease 1000ms;
                 @include sp_layout {
+                    right: -20%;
                     width: 65%;
                 }
                 img {
@@ -308,6 +309,7 @@
                 position: absolute;
                 animation: 6s ease-in 1s infinite forwards running comment;
                 opacity: 0;
+                font-size: 0.8rem;
             }
             .comment_1 {
                 top: 30%;
