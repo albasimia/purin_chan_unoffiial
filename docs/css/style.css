@@ -156,8 +156,8 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background-size: cover;
   z-index: -1;
   background-position: 40% 50%; }
@@ -270,8 +270,8 @@ body {
     .section_profile .profile_wrapper .profile_inner_3 .purin {
       position: absolute;
       top: 50%;
-      right: -20%;
-      width: 70%;
+      right: -38%;
+      width: 80%;
       -webkit-transform: translate(-50%, -50%);
               transform: translate(-50%, -50%);
       transition: opacity ease 1000ms; }
@@ -305,7 +305,8 @@ body {
       position: absolute;
       -webkit-animation: 6s ease-in 1s infinite forwards running comment;
               animation: 6s ease-in 1s infinite forwards running comment;
-      opacity: 0; }
+      opacity: 0;
+      font-size: 0.8rem; }
     .section_profile .profile_wrapper .profile_inner_3 .comment_1 {
       top: 30%;
       left: 10%;
@@ -469,10 +470,6 @@ body {
           flex-direction: column;
           width: 60%;
           margin: 0 auto; }
-    .bg .bg1,
-    .bg .bg2 {
-      width: 100vw;
-      height: 100vh; }
     .section_profile,
     .section_youtube,
     .section_review {
@@ -509,6 +506,7 @@ body {
       .section_profile .profile_wrapper .profile_inner_3 {
         padding: 0 0 100%; }
         .section_profile .profile_wrapper .profile_inner_3 .purin {
+          right: -20%;
           width: 65%; }
         .section_profile .profile_wrapper .profile_inner_3 .text_wrapper {
           font-size: 5vw; }
